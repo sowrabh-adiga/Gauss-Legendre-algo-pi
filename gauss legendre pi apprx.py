@@ -5,13 +5,14 @@ Created on Wed Nov  4 10:53:23 2020
 @author: sowra
 """
 import time
-t0 = time.time()
+t0 = time.time()  # to measure execution time
 
-from decimal import *
+from decimal import *  #better than float
 
 
 getcontext().prec = 100000
 
+#---------------- Algorithm -------------------------#
 a = 1
 b = Decimal(1) / Decimal(2).sqrt()
 t = Decimal(1) / Decimal(4)
@@ -24,12 +25,16 @@ for _ in range(25):
 	p *= 2
 	a = an
 
-#print (((a + b) ** 2) / (4 * t))
 data = ((a + b) ** 2) / (4 * t)
+
+#---------------- Algorithm -------------------------#
+
+# print to a file
 f = open("piValue100000.txt", "w")
 f.write(str(data))
 f.close()
 
+#print time required for execution
 print("--- %s seconds ---" % (time.time() - t0))
 
 
