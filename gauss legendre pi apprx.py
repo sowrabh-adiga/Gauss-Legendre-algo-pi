@@ -10,7 +10,7 @@ t0 = time.time()  # to measure execution time
 from decimal import *  #better than float
 
 
-getcontext().prec = 100000
+getcontext().prec = 100000  #print 100 thousand decimal places of pi
 
 #---------------- Algorithm -------------------------#
 a = 1
